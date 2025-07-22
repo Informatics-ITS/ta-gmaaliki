@@ -31,7 +31,7 @@ Embed video demo di bawah ini (ganti `VIDEO_ID` dengan ID video YouTube Anda):
    ```
 2. **Instalasi Dependensi**
    ```bash
-   cd TA-gmaaliki
+   cd ta-gmaaliki
    pip install -r requirements.txt
    ```
 3. **Konfigurasi**
