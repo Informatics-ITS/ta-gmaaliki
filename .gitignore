@@ -7,7 +7,6 @@ yolov8n-pose.pt
 yolov8n.pt
 yolov8s.pt
 __pycache__
-models/weights
 .conda
 config.py
 old-object_tracker.py

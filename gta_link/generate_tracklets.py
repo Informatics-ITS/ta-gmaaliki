@@ -37,7 +37,9 @@ def generate_tracklets(
 
     os.makedirs(output_dir, exist_ok=True)
 
-    imgs = sorted(glob.glob(os.path.join(data_path, 'img1', '*')))   # assuming data is organized in MOT convention
+    imgs = sorted(glob.glob(os.path.join(data_path, '*')))
+    print(data_path)
+    print(imgs)
     track_res = np.genfromtxt(pred_file,dtype=float, delimiter=',')
 
     last_frame = int(track_res[-1][0])

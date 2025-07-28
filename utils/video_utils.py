@@ -108,7 +108,7 @@ def process_images_as_video(processor = None, image_dir: str = 0, output_video: 
     # Refine tracking results with Global Tracklet Association
     generate_tracklets(
         model_path = "./gta_link/reid_checkpoints\sports_model.pth.tar-60",
-        data_path = f"./input_videos/test/{name}",
+        data_path = f"./input_videos/{name}",
         pred_file = f"./output_videos/mot_results/{name}.txt",
         output_dir = f"./output_videos/pickle",
     )
@@ -128,7 +128,7 @@ def process_images_as_video(processor = None, image_dir: str = 0, output_video: 
     )
 
 
-    kobj_file_path = f"./output_videos/test/{name}/keypoint_tracks.json"
+    kobj_file_path = f"./output_videos/{name}/keypoint_tracks.json"
     processed_frames = processor.process_from_mot_export_and_kobj_json(frames=frames, fps=fps, mot_file_path=refined_mot_path, kobj_file_path=kobj_file_path)
 
     processor.extract_speed()
