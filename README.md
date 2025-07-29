@@ -9,19 +9,16 @@
 ---
 
 ## 📺 Demo Aplikasi  
-Embed video demo di bawah ini (ganti `VIDEO_ID` dengan ID video YouTube Anda):  
 
-[![Demo Aplikasi](https://i.ytimg.com/vi/zIfRMTxRaIs/maxresdefault.jpg)](https://www.youtube.com/watch?v=VIDEO_ID)  
+[![Demo Aplikasi](./thumbnail.png)](https://www.youtube.com/watch?v=QT_uBTFu9A4)  
 *Klik gambar di atas untuk menonton demo*
 
 ---
 
-*Konten selanjutnya hanya merupakan contoh awalan yang baik. Anda dapat berimprovisasi bila diperlukan.*
-
 ## 🛠 Panduan Instalasi & Menjalankan Software  
 
 ### Prasyarat  
-- Daftar dependensi (contoh):
+- Daftar dependensi:
   - Python 3.8
 
 ### Langkah-langkah  
@@ -34,24 +31,19 @@ Embed video demo di bawah ini (ganti `VIDEO_ID` dengan ID video YouTube Anda):
    cd ta-gmaaliki
    pip install -r requirements.txt
    ```
-3. **Konfigurasi**
-- Salin/rename file .env.example menjadi .env
-- Isi variabel lingkungan sesuai kebutuhan (database, API key, dll.)
+3. **Input Data**
+- Salin klip yang ingi di proses pada direktori `input_videos` dengan ekstensi `.mp4`, Contoh: `input_videos/dummy.mp4`
+- Ubah variabel berikut pada `main.py`:
+     -  `input_video` : jalur direktori klip yang ingin diproses
+     -  `video_fps` : fps dari klip yang diproses 
 4. **Jalankan Aplikasi**
    ```bash
    python main.py
    ```
-5. Buka browser dan kunjungi: `http://localhost:3000` (sesuaikan dengan port proyek Anda)
+5. Output dapat dilihat pada `output_videos` dengan nama direktory yang sama dengan nama klip. 
 
 ---
 
-## 📚 Dokumentasi Tambahan
-
-- [![Dokumentasi API]](docs/api.md)
-- [![Diagram Arsitektur]](docs/architecture.png)
-- [![Struktur Basis Data]](docs/database_schema.sql)
-
----
 
 ## ⁉️ Pertanyaan?
 
