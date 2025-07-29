@@ -20,6 +20,7 @@ def main():
     start_time = time.time()
 
     input_video = 'input_videos/dummy.mp4'
+    video_fps = 25
     clip_name = os.path.splitext(input_video.split('/')[-1])[0]
     image_dir = f'input_videos/{clip_name}'
     output_dir = f'output_videos/{clip_name}'
@@ -129,7 +130,7 @@ def main():
                             image_dir=image_dir,
                             output_video=f'{output_dir}/result.mp4',
                             batch_size=10,
-                            fps=25,
+                            fps=video_fps,
                             name=clip_name,
                             )
     
